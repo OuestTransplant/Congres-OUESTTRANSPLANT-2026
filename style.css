@@ -7,21 +7,20 @@ body {
 .header {
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 40px; /* espace entre le logo et les liens */
     background-color: #004466;
     color: white;
     padding: 10px 20px;
-    position: relative;
+    flex-wrap: wrap;
 }
+
 
 .header-logo {
     height: 60px;
 }
 
-/* Centrage horizontal des liens */
 .nav-links {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
     gap: 25px;
 }
@@ -32,7 +31,6 @@ body {
     font-weight: bold;
     font-size: 1rem;
 }
-
 
 
 /* --- Bloc central avec image de fond --- */
@@ -72,18 +70,15 @@ body {
     background-color: #e6e6e6;
 }
 
-/* ✅ Ajout ici : on abaisse le bloc adresse */
 .adresse-info {
     width: 40%;
     padding: 20px;
     box-sizing: border-box;
-    margin-top: 4cm; /* <- décalage de 3 cm vers le bas */
 }
 
-/* ✅ Abaisse le bouton "Où se loger ?" aussi */
 .btn-logement {
     display: inline-block;
-    margin-top: 0cm; /* <- décalage vers le bas */
+    margin-top: 15px;
     background-color: #0077cc;
     color: white;
     padding: 10px 15px;
@@ -91,9 +86,7 @@ body {
     border-radius: 4px;
 }
 
-/* ✅ Abaisse la carte aussi */
 .map {
     width: 60%;
     height: 100%;
-    margin-top: 5cm; /* <- décalage vers le bas */
 }
