@@ -1,6 +1,13 @@
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-image: url('images/fond.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
 }
 
 /* --- Bandeau supérieur --- */
@@ -33,29 +40,15 @@ body {
     font-size: 1rem;
 }
 
-
-
-/* --- Bloc central avec image de fond --- */
+/* --- Bloc central --- */
 .main-content {
     text-align: center;
     padding: 50px 20px;
-    background-image: url('images/fond.jpg'); /* modifiable (JPEG, PNG, TIFF...) */
-    background-size: cover;
-    background-position: center;
     color: white;
     text-shadow: 1px 1px 2px black;
 }
 
-.main-content h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-.main-content .lieu {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
+/* --- Bouton inscription --- */
 .btn-inscription {
     background-color: #004466;
     color: white;
@@ -72,18 +65,16 @@ body {
     background-color: #e6e6e6;
 }
 
-/* ✅ Ajout ici : on abaisse le bloc adresse */
 .adresse-info {
     width: 40%;
     padding: 20px;
     box-sizing: border-box;
-    margin-top: 4cm; /* <- décalage de 3 cm vers le bas */
+    margin-top: 4cm;
 }
 
-/* ✅ Abaisse le bouton "Où se loger ?" aussi */
 .btn-logement {
     display: inline-block;
-    margin-top: 0cm; /* <- décalage vers le bas */
+    margin-top: 0cm;
     background-color: #0077cc;
     color: white;
     padding: 10px 15px;
@@ -91,10 +82,10 @@ body {
     border-radius: 4px;
 }
 
-/* ✅ Abaisse la carte aussi */
 .map {
     width: 60%;
     height: 100%;
-    margin-top: 5cm; /* <- décalage vers le bas */
+    margin-top: 5cm;
 }
+
 
