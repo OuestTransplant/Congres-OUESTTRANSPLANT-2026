@@ -2,37 +2,134 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Inscription – Congrès Ouest Transplant 2025</title>
+    <title>Inscription – Congrès Ouest Transplant 2026</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <!-- Bandeau -->
-    <header class="header">
-        <img src="images/logo.png" alt="Logo de l'association" class="header-logo">
-        <nav class="nav-links">
-            <a href="index.html">Accueil</a>
-            <a href="programme.html">Programme</a>
-            <a href="inscription.html">Inscription</a>
-            <a href="partenaires.html">Partenaires</a>
-			<a href="abstracts.html">Abstracts</a>
-			<a href="bourse.html">Bourse</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
 
-    <!-- Contenu principal -->
-    <main class="main-content">
-        <h1>Inscription au Congrès</h1>
+<body>
+<header class="header">
+    <img src="images/logo.png" alt="Logo de l'association" class="header-logo">
+
+    <nav class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="programme.html">Programme</a>
+        <a href="inscription.html">Inscription</a>
+        <a href="partenaires.html">Partenaires</a>
+        <a href="Abstracts.html">Abstracts</a>
+        <a href="Bourse.html">Bourse</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main class="main-content">
+    <h1>Inscription au Congrès</h1>
+
+    <form id="form-inscription">
+        <label>Nom :</label>
+        <input type="text" name="nom" required>
+
+        <label>Prénom :</label>
+        <input type="text" name="prenom" required>
+
+        <label>Profession :</label>
+        <select name="profession" required>
+            <option value="">-- sélectionner --</option>
+            <option>Médecin</option>
+            <option>IDE</option>
+            <option>IPA</option>
+            <option>Autre</option>
+        </select>
+
+        <label>Lieu d'exercice :</label>
+        <select name="lieu" required>
+            <option value="">-- sélectionner --</option>
+            <option>CHU</option>
+            <option>CH</option>
+            <option>Établissement privé à but non lucratif</option>
+            <option>Établissement privé</option>
+            <option>Autre</option>
+        </select>
+
+        <label>Email :</label>
+        <input type="email" name="email" required>
+
+        <label class="checkbox-line">
+            <input type="checkbox" name="rgpd" required>
+            J'accepte que mes données personnelles soient utilisées pour la gestion de mon inscription.
+        </label>
+
+        <label class="checkbox-line">
+            <input type="checkbox" name="newsletter">
+            J'accepte de recevoir des informations futures de l'Association Ouest Transplant.
+        </label>
+
+        <button type="submit" class="btn-inscription">
+            Valider l'inscription
+        </button>
+    </form>
+
+    <div class="bloc-inscription">
         <p>Vous pouvez vous inscrire directement via notre plateforme partenaire :</p>
-        <a href="https://www.helloasso.com/associations/association-ouest-transplant/adhesions/inscription-congres-ouest-transplant-nantes-2026" target="_blank" class="btn-inscription">
+
+        <a href="https://www.helloasso.com/associations/association-ouest-transplant/adhesions/inscription-congres-ouest-transplant-nantes-2026"
+           target="_blank"
+           class="btn-inscription">
             S'inscrire sur HelloAsso
         </a>
-		<p>Vous pouvez télécharger le document de convention pour prise en charge:</p>
-        <a href="documents/2_Convention_FC_OT_2026_V1.docx" target="_blank" class="btn-inscription">
-            Ici
+
+        <p>Vous pouvez télécharger le document de convention pour prise en charge :</p>
+
+        <a href="documents/convention.pdf"
+           target="_blank"
+           class="btn-inscription">
+            Télécharger la convention
         </a>
-		<p>Renvoyez la dûement compléter à secouesttransplant@gmail.com </p>
-    </main>
+
+        <p>Renvoyez-la dûment complétée à : secouesttransplant@gmail.com</p>
+
+        <p class="rgpd">
+            Les informations recueillies sont enregistrées par l'Association Ouest Transplant
+            afin de gérer les inscriptions au congrès. Ces données sont conservées pendant
+            la durée nécessaire à l'organisation de l'événement et ne sont pas transmises
+            à des tiers sans votre consentement. Conformément au RGPD, vous pouvez exercer
+            vos droits d'accès, de rectification et de suppression à :
+            secouesttransplant@gmail.com
+        </p>
+    </div>
+</main>
+
+<script>
+document.getElementById("form-inscription").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+
+    const data = {
+        nom: form.nom.value,
+        prenom: form.prenom.value,
+        profession: form.profession.value,
+        lieu: form.lieu.value,
+        email: form.email.value,
+        rgpd: form.rgpd.checked,
+        newsletter: form.newsletter.checked
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbzZO7rf2PqnJ15axOmJFzr33FG4hp7XkbVdp2-UZ8631qmewh0ZqIPHDhFylwFv4DZ5/exec", {
+        method: "POST",
+        body: JSON.stringify(data)
+    })
+    .then(response => response.text())
+    .then(result => {
+        alert("Inscription enregistrée !");
+        form.reset();
+    })
+    .catch(error => {
+        alert("Erreur lors de l'enregistrement.");
+        console.error(error);
+    });
+});
+</script>
+
 </body>
 </html>
 
