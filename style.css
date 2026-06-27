@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -48,8 +47,10 @@ body {
     text-shadow: 1px 1px 2px black;
 }
 
-/* --- Bouton inscription --- */
-.btn-inscription {
+/* --- Boutons --- */
+.btn-inscription,
+.btn-logement {
+    display: inline-block;
     background-color: #004466;
     color: white;
     padding: 12px 25px;
@@ -58,7 +59,65 @@ body {
     font-weight: bold;
 }
 
-/* --- Bloc bas (adresse + carte) --- */
+.btn-logement {
+    background-color: #0077cc;
+    padding: 10px 15px;
+}
+
+/* --- Formulaire inscription --- */
+#form-inscription {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#form-inscription label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#form-inscription input,
+#form-inscription select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+/* Cases à cocher bien alignées */
+.checkbox-line {
+    display: flex !important;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 15px 0;
+    font-weight: normal !important;
+    line-height: 1.4;
+}
+
+.checkbox-line input[type="checkbox"] {
+    width: auto !important;
+    margin-top: 3px;
+}
+
+/* --- Bloc inscription / texte RGPD --- */
+.bloc-inscription {
+    text-align: center;
+    margin: 30px auto;
+    max-width: 700px;
+}
+
+.rgpd {
+    max-width: 700px;
+    margin: 30px auto;
+    font-size: 0.9em;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* --- Bloc bas adresse + carte --- */
 .info-section {
     display: flex;
     height: 25vh;
@@ -70,16 +129,6 @@ body {
     padding: 20px;
     box-sizing: border-box;
     margin-top: 4cm;
-}
-
-.btn-logement {
-    display: inline-block;
-    margin-top: 0cm;
-    background-color: #0077cc;
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 4px;
 }
 
 .map {
