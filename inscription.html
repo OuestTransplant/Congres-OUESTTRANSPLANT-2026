@@ -15,8 +15,8 @@
         <a href="programme.html">Programme</a>
         <a href="inscription.html">Inscription</a>
         <a href="partenaires.html">Partenaires</a>
-        <a href="Abstracts.html">Abstracts</a>
-        <a href="Bourse.html">Bourse</a>
+        <a href="abstracts.html">Abstracts</a>
+        <a href="bourse.html">Bourse</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
@@ -49,9 +49,18 @@
             <option>Établissement privé</option>
             <option>Autre</option>
         </select>
-
+		
+		<label>Ville :</label>
+        <input type="text" name="ville" required>
+		
+		<label>Numéro de téléphone :</label>
+        <input type="tel" name="telephone" required>
+		
         <label>Email :</label>
         <input type="email" name="email" required>
+		
+		<label>Email de l'organisme de formation :</label>
+        <input type="email" name="email_organisme" required>
 
         <label class="checkbox-line">
             <input type="checkbox" name="rgpd" required>
@@ -109,7 +118,10 @@ document.getElementById("form-inscription").addEventListener("submit", function(
         prenom: form.prenom.value,
         profession: form.profession.value,
         lieu: form.lieu.value,
+		ville: form.ville.value,
+		telephone: form.telephone.value,
         email: form.email.value,
+		email_organisme: form.email_organisme.value,
         rgpd: form.rgpd.checked,
         newsletter: form.newsletter.checked
     };
@@ -132,6 +144,10 @@ document.getElementById("form-inscription").addEventListener("submit", function(
 
 </body>
 </html>
+
+
+
+
 
 
 
