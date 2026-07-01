@@ -1,142 +1,392 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-image: url('images/fond.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: white;
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:18px;
+    color:#ffffff;
+
+    background-image:url("images/fond.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
 }
 
-/* --- Bandeau supérieur --- */
-.header {
-    display: flex;
-    align-items: center;
-    background-color: #004466;
-    color: white;
-    padding: 10px 20px;
-    position: relative;
+/* ---------- Bandeau ---------- */
+
+.header{
+
+    display:flex;
+    align-items:center;
+
+    background:#004466;
+
+    padding:15px 35px;
+
+    position:relative;
+
+    box-shadow:0px 2px 10px rgba(0,0,0,.25);
+
 }
 
-.header-logo {
-    height: 60px;
+.header-logo{
+
+    height:70px;
+
 }
 
-/* Centrage horizontal des liens */
-.nav-links {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 25px;
+.nav-links{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:35px;
+
 }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
+.nav-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    transition:.25s;
+
 }
 
-/* --- Bloc central --- */
-.main-content {
-    text-align: center;
-    padding: 50px 20px;
-    color: white;
-    text-shadow: 1px 1px 2px black;
+.nav-links a:hover{
+
+    color:#9bd4ff;
+
 }
 
-/* --- Boutons --- */
-.btn-inscription,
-.btn-logement {
-    display: inline-block;
-    background-color: #004466;
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+
+/* ---------- Bloc principal ---------- */
+
+.main-content{
+
+    max-width:1000px;
+
+    margin:50px auto;
+
+    padding:40px;
+
+    background:rgba(0,0,0,.35);
+
+    backdrop-filter:blur(3px);
+
+    border-radius:12px;
+
 }
 
-.btn-logement {
-    background-color: #0077cc;
-    padding: 10px 15px;
+/* ---------- Hiérarchie typographique ---------- */
+
+.main-content h1{
+
+    font-size:48px;
+
+    font-weight:700;
+
+    text-align:center;
+
+    margin-bottom:40px;
+
 }
 
-/* --- Formulaire inscription --- */
-#form-inscription {
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: left;
+.main-content h2{
+
+    font-size:34px;
+
+    margin-top:45px;
+
+    margin-bottom:20px;
+
+    color:#bfe8ff;
+
 }
 
-#form-inscription label {
-    display: block;
-    margin-top: 15px;
-    font-weight: bold;
+.main-content h3{
+
+    font-size:28px;
+
+    margin-top:35px;
+
+    margin-bottom:15px;
+
+}
+
+.main-content p{
+
+    font-size:20px;
+
+    line-height:1.7;
+
+    margin-bottom:20px;
+
+}
+
+.main-content li{
+
+    font-size:20px;
+
+    line-height:1.6;
+
+}
+
+
+/* ---------- Formulaire ---------- */
+
+#form-inscription{
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+#form-inscription label{
+
+    display:block;
+
+    margin-top:20px;
+
+    margin-bottom:6px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
 }
 
 #form-inscription input,
-#form-inscription select {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 12px;
-    box-sizing: border-box;
+
+#form-inscription select{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:6px;
+
+    font-size:18px;
+
+    box-sizing:border-box;
+
 }
 
-/* Cases à cocher bien alignées */
-.checkbox-line {
-    display: flex !important;
-    align-items: flex-start;
-    gap: 10px;
-    margin: 15px 0;
-    font-weight: normal !important;
-    line-height: 1.4;
+
+/* ---------- Cases à cocher ---------- */
+
+.checkbox-line{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:12px;
+
+    margin-top:25px;
+
+    font-size:16px;
+
+    line-height:1.5;
+
 }
 
-.checkbox-line input[type="checkbox"] {
-    width: auto !important;
-    margin-top: 3px;
+.checkbox-line input{
+
+    width:20px;
+
+    height:20px;
+
+    margin-top:3px;
+
 }
 
-/* --- Bloc inscription / texte RGPD --- */
-.bloc-inscription {
-    text-align: center;
-    margin: 30px auto;
-    max-width: 700px;
+
+/* ---------- Boutons ---------- */
+
+.btn-inscription,
+
+.btn-logement{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:14px 28px;
+
+    border-radius:6px;
+
+    background:#005f8c;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    transition:.25s;
+
 }
 
-.rgpd {
-    max-width: 700px;
-    margin: 30px auto;
-    font-size: 0.9em;
-    line-height: 1.5;
-    text-align: justify;
+.btn-inscription:hover,
+
+.btn-logement:hover{
+
+    background:#0096d6;
+
 }
 
-/* --- Bloc bas adresse + carte --- */
-.info-section {
-    display: flex;
-    height: 25vh;
-    background-color: #e6e6e6;
+
+/* ---------- Bloc complémentaire ---------- */
+
+.bloc-inscription{
+
+    margin-top:60px;
+
+    text-align:center;
+
 }
 
-.adresse-info {
-    width: 40%;
-    padding: 20px;
-    box-sizing: border-box;
-    margin-top: 150px;
+.rgpd{
+
+    margin:40px auto;
+
+    max-width:900px;
+
+    font-size:15px;
+
+    text-align:justify;
+
+    line-height:1.7;
+
 }
 
-.map {
-    width: 60%;
-    height: 100%;
-    margin-top: 190px;
-}
-```
 
+/* ---------- Adresse + carte ---------- */
+
+.info-section{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    background:rgba(255,255,255,.90);
+
+    color:black;
+
+    padding:35px;
+
+}
+
+.adresse-info{
+
+    width:40%;
+
+    padding-right:40px;
+
+}
+
+.adresse-info h2{
+
+    color:#004466;
+
+}
+
+.adresse-info p{
+
+    color:#222222;
+
+    font-size:18px;
+
+}
+
+.map{
+
+    width:60%;
+
+    height:450px;
+
+}
+
+.map iframe{
+
+    width:100%;
+
+    height:100%;
+
+    border:none;
+
+}
+
+
+/* ---------- Responsive ---------- */
+
+@media screen and (max-width:900px){
+
+.header{
+
+    flex-direction:column;
+
+}
+
+.nav-links{
+
+    position:static;
+
+    transform:none;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    margin-top:20px;
+
+}
+
+.info-section{
+
+    flex-direction:column;
+
+}
+
+.adresse-info,
+
+.map{
+
+    width:100%;
+
+}
+
+.map{
+
+    margin-top:30px;
+
+    height:350px;
+
+}
+
+.main-content{
+
+    margin:20px;
+
+    padding:25px;
+
+}
+
+}
 
 
