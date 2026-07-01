@@ -1,392 +1,266 @@
-body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:18px;
-    color:#ffffff;
 
-    background-image:url("images/fond.jpg");
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-    background-attachment:fixed;
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    background-image: url("images/fond.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* ---------- Bandeau ---------- */
 
-.header{
-
-    display:flex;
-    align-items:center;
-
-    background:#004466;
-
-    padding:15px 35px;
-
-    position:relative;
-
-    box-shadow:0px 2px 10px rgba(0,0,0,.25);
-
+.header {
+    display: flex;
+    align-items: center;
+    background: #004466;
+    padding: 15px 35px;
+    position: relative;
+    box-shadow: 0px 2px 10px rgba(0,0,0,.25);
 }
 
-.header-logo{
-
-    height:70px;
-
+.header-logo {
+    height: 70px;
 }
 
-.nav-links{
-
-    position:absolute;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    display:flex;
-
-    gap:35px;
-
+.nav-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 35px;
 }
 
-.nav-links a{
-
-    color:white;
-
-    text-decoration:none;
-
-    font-size:18px;
-
-    font-weight:bold;
-
-    transition:.25s;
-
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: .25s;
 }
 
-.nav-links a:hover{
-
-    color:#9bd4ff;
-
+.nav-links a:hover {
+    color: #9bd4ff;
 }
-
 
 /* ---------- Bloc principal ---------- */
 
-.main-content{
-
-    max-width:1000px;
-
-    margin:50px auto;
-
-    padding:40px;
-
-    background:rgba(0,0,0,.35);
-
-    backdrop-filter:blur(3px);
-
-    border-radius:12px;
-
+.main-content {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px;
+    background: rgba(0,0,0,.35);
+    backdrop-filter: blur(3px);
+    border-radius: 12px;
 }
 
 /* ---------- Hiérarchie typographique ---------- */
 
-.main-content h1{
-
-    font-size:48px;
-
-    font-weight:700;
-
-    text-align:center;
-
-    margin-bottom:40px;
-
+.main-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.main-content h2{
-
-    font-size:34px;
-
-    margin-top:45px;
-
-    margin-bottom:20px;
-
-    color:#bfe8ff;
-
+.main-content h2 {
+    font-size: 34px;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    color: #bfe8ff;
 }
 
-.main-content h3{
-
-    font-size:28px;
-
-    margin-top:35px;
-
-    margin-bottom:15px;
-
+.main-content h3 {
+    font-size: 28px;
+    margin-top: 35px;
+    margin-bottom: 15px;
 }
 
-.main-content p{
-
-    font-size:20px;
-
-    line-height:1.7;
-
-    margin-bottom:20px;
-
+.main-content p {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 20px;
 }
 
-.main-content li{
-
-    font-size:20px;
-
-    line-height:1.6;
-
+.main-content li {
+    font-size: 20px;
+    line-height: 1.6;
 }
 
+/* ---------- Formulaire inscription en 2 colonnes ---------- */
 
-/* ---------- Formulaire ---------- */
-
-#form-inscription{
-
-    max-width:700px;
-
-    margin:auto;
-
+.form-grid {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 30px;
+    text-align: left;
 }
 
-#form-inscription label{
-
-    display:block;
-
-    margin-top:20px;
-
-    margin-bottom:6px;
-
-    font-size:18px;
-
-    font-weight:bold;
-
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 18px;
 }
 
-#form-inscription input,
-
-#form-inscription select{
-
-    width:100%;
-
-    padding:12px;
-
-    border:none;
-
-    border-radius:6px;
-
-    font-size:18px;
-
-    box-sizing:border-box;
-
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    box-sizing: border-box;
 }
 
+/* Élément qui prend toute la largeur du formulaire */
+
+.full-width {
+    grid-column: 1 / -1;
+}
 
 /* ---------- Cases à cocher ---------- */
 
-.checkbox-line{
-
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:12px;
-
-    margin-top:25px;
-
-    font-size:16px;
-
-    line-height:1.5;
-
+.checkbox-line {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: normal;
 }
 
-.checkbox-line input{
-
-    width:20px;
-
-    height:20px;
-
-    margin-top:3px;
-
+.checkbox-line input {
+    width: auto;
+    margin-top: 4px;
 }
 
+/* ---------- Bouton de validation centré ---------- */
+
+.form-submit {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form-submit .btn-inscription {
+    display: inline-block;
+    margin: 20px auto;
+}
 
 /* ---------- Boutons ---------- */
 
 .btn-inscription,
-
-.btn-logement{
-
-    display:inline-block;
-
-    margin-top:20px;
-
-    padding:14px 28px;
-
-    border-radius:6px;
-
-    background:#005f8c;
-
-    color:white;
-
-    text-decoration:none;
-
-    font-size:20px;
-
-    font-weight:bold;
-
-    transition:.25s;
-
+.btn-logement {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 28px;
+    border-radius: 6px;
+    background: #005f8c;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: .25s;
 }
 
 .btn-inscription:hover,
-
-.btn-logement:hover{
-
-    background:#0096d6;
-
+.btn-logement:hover {
+    background: #0096d6;
 }
-
 
 /* ---------- Bloc complémentaire ---------- */
 
-.bloc-inscription{
-
-    margin-top:60px;
-
-    text-align:center;
-
+.bloc-inscription {
+    margin-top: 60px;
+    text-align: center;
 }
 
-.rgpd{
-
-    margin:40px auto;
-
-    max-width:900px;
-
-    font-size:15px;
-
-    text-align:justify;
-
-    line-height:1.7;
-
+.rgpd {
+    margin: 40px auto;
+    max-width: 900px;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.7;
 }
-
 
 /* ---------- Adresse + carte ---------- */
 
-.info-section{
-
-    display:flex;
-
-    align-items:flex-start;
-
-    background:rgba(255,255,255,.90);
-
-    color:black;
-
-    padding:35px;
-
+.info-section {
+    display: flex;
+    align-items: flex-start;
+    background: rgba(255,255,255,.90);
+    color: black;
+    padding: 35px;
 }
 
-.adresse-info{
-
-    width:40%;
-
-    padding-right:40px;
-
+.adresse-info {
+    width: 40%;
+    padding-right: 40px;
 }
 
-.adresse-info h2{
-
-    color:#004466;
-
+.adresse-info h2 {
+    color: #004466;
 }
 
-.adresse-info p{
-
-    color:#222222;
-
-    font-size:18px;
-
+.adresse-info p {
+    color: #222222;
+    font-size: 18px;
 }
 
-.map{
-
-    width:60%;
-
-    height:450px;
-
+.map {
+    width: 60%;
+    height: 450px;
 }
 
-.map iframe{
-
-    width:100%;
-
-    height:100%;
-
-    border:none;
-
+.map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
-
 
 /* ---------- Responsive ---------- */
 
-@media screen and (max-width:900px){
+@media screen and (max-width: 900px) {
+    .header {
+        flex-direction: column;
+    }
 
-.header{
+    .nav-links {
+        position: static;
+        transform: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+    }
 
-    flex-direction:column;
+    .form-grid {
+        grid-template-columns: 1fr;
+        max-width: 95%;
+    }
 
-}
+    .info-section {
+        flex-direction: column;
+    }
 
-.nav-links{
+    .adresse-info,
+    .map {
+        width: 100%;
+    }
 
-    position:static;
+    .map {
+        margin-top: 30px;
+        height: 350px;
+    }
 
-    transform:none;
-
-    flex-wrap:wrap;
-
-    justify-content:center;
-
-    margin-top:20px;
-
-}
-
-.info-section{
-
-    flex-direction:column;
-
-}
-
-.adresse-info,
-
-.map{
-
-    width:100%;
-
-}
-
-.map{
-
-    margin-top:30px;
-
-    height:350px;
-
-}
-
-.main-content{
-
-    margin:20px;
-
-    padding:25px;
-
-}
-
+    .main-content {
+        margin: 20px;
+        padding: 25px;
+    }
 }
 
 
