@@ -128,17 +128,15 @@ body {
     width: 40%;
     padding: 20px;
     box-sizing: border-box;
-    margin-top: 50px;
-}
-.adresse-info p {
-    font-size: 22px;
-    line-height: 1.5;
+    margin-top: 150px;
 }
 
 .map {
     width: 60%;
     height: 100%;
-    margin-top: 50px;
+    margin-top: 190px;
 }
+```
+
 
 
