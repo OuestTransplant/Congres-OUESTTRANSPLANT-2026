@@ -14,9 +14,9 @@
         <a href="index.html">Accueil</a>
         <a href="programme.html">Programme</a>
         <a href="inscription.html">Inscription</a>
+        <a href="partenaires.html">Partenaires</a>
         <a href="abstracts.html">Abstracts</a>
         <a href="bourse.html">Bourse</a>
-		<a href="partenaires.html">Partenaires</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
@@ -24,59 +24,75 @@
 <main class="main-content">
     <h1>Inscription au Congrès</h1>
 
-    <form id="form-inscription">
-        <label>Nom :</label>
-        <input type="text" name="nom" required>
+    <form id="form-inscription" class="form-grid">
+        <div class="form-group">
+            <label>Nom :</label>
+            <input type="text" name="nom" required>
+        </div>
 
-        <label>Prénom :</label>
-        <input type="text" name="prenom" required>
+        <div class="form-group">
+            <label>Prénom :</label>
+            <input type="text" name="prenom" required>
+        </div>
 
-        <label>Profession :</label>
-        <select name="profession" required>
-            <option value="">-- sélectionner --</option>
-            <option>Médecin</option>
-            <option>IDE</option>
-            <option>IPA</option>
-			<option>Labo</option>
-			<option>Administratif</option>
-            <option>Autre</option>
-        </select>
+        <div class="form-group">
+            <label>Profession :</label>
+            <select name="profession" required>
+                <option value="">-- sélectionner --</option>
+                <option>Médecin</option>
+                <option>IDE</option>
+                <option>IPA</option>
+                <option>Autre</option>
+            </select>
+        </div>
 
-        <label>Lieu d'exercice :</label>
-        <select name="lieu" required>
-            <option value="">-- sélectionner --</option>
-            <option>CHU</option>
-            <option>CH</option>
-            <option>Établissement privé à but non lucratif</option>
-            <option>Établissement privé</option>
-            <option>Autre</option>
-        </select>
-		
-		<label>Ville :</label>
-        <input type="text" name="ville" required>
-		
-		<label>Numéro de téléphone :</label>
-        <input type="tel" name="telephone" required>
-		
-        <label>Email :</label>
-        <input type="email" name="email" required>
-		
-		<label>Email de l'organisme de formation :</label>
-        <input type="email" name="email_organisme">
+        <div class="form-group">
+            <label>Lieu d'exercice :</label>
+            <select name="lieu" required>
+                <option value="">-- sélectionner --</option>
+                <option>CHU</option>
+                <option>CH</option>
+                <option>Établissement privé à but non lucratif</option>
+                <option>Établissement privé</option>
+                <option>Autre</option>
+            </select>
+        </div>
 
-        <label class="checkbox-line">
+        <div class="form-group">
+            <label>Ville :</label>
+            <input type="text" name="ville" required>
+        </div>
+
+        <div class="form-group">
+            <label>Numéro de téléphone :</label>
+            <input type="tel" name="telephone" required>
+        </div>
+
+        <div class="form-group">
+            <label>Email :</label>
+            <input type="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label>Email organisme de formation :</label>
+            <input type="email" name="email_organisme">
+        </div>
+
+        <label class="checkbox-line full-width">
             <input type="checkbox" name="rgpd" required>
-            J'accepte que mes données personnelles soient utilisées pour la gestion de mon inscription.
+            <span>J'accepte que mes données personnelles soient utilisées pour la gestion de mon inscription.</span>
         </label>
 
-        <label class="checkbox-line">
+        <label class="checkbox-line full-width">
             <input type="checkbox" name="newsletter">
-            J'accepte de recevoir des informations futures de l'Association Ouest Transplant.
+            <span>J'accepte de recevoir des informations futures de l'Association Ouest Transplant.</span>
         </label>
 
-        <button type="submit" class="btn-inscription">
-            Valider l'inscription
-        </button>
+        <div class="form-submit full-width">
+            <button type="submit" class="btn-inscription">
+                Valider l'inscription
+            </button>
+        </div>
     </form>
 
     <div class="bloc-inscription">
@@ -120,10 +136,10 @@ document.getElementById("form-inscription").addEventListener("submit", function(
         prenom: form.prenom.value,
         profession: form.profession.value,
         lieu: form.lieu.value,
-		ville: form.ville.value,
-		telephone: form.telephone.value,
+        ville: form.ville.value,
+        telephone: form.telephone.value,
         email: form.email.value,
-		email_organisme: form.email_organisme.value,
+        email_organisme: form.email_organisme.value,
         rgpd: form.rgpd.checked,
         newsletter: form.newsletter.checked
     };
