@@ -1,2 +1,2 @@
 # Congres-OUESTTRANSPLANT-2026
-Site  du Congrès OUESTTRANSPLANT 2026 le 6 Novembre à NANTES
+Site  du Congrès OUESTTRANSPLANT 2026 le 13 Novembre à NANTES
