@@ -101,7 +101,7 @@ body {
 
 .form-grid {
     max-width: 900px;
-    margin: 0 auto;
+    margin: 40px auto 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 22px 30px;
