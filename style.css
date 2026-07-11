@@ -1,38 +1,9 @@
-```css
-/* =======================================================
-   CONGRÈS OUEST TRANSPLANT
-   Style CSS v4
-======================================================= */
-
-/* =======================================================
-   PALETTE DE COULEURS
-======================================================= */
-
-:root {
-    --bleu-principal: #004466;
-    --bleu-secondaire: #005f8c;
-    --bleu-survol: #0096d6;
-    --bleu-clair: #bfe8ff;
-
-    --blanc: #ffffff;
-    --noir: #000000;
-    --texte-sombre: #222222;
-
-    --fond-principal: rgba(0, 0, 0, 0.35);
-    --fond-clair: rgba(255, 255, 255, 0.92);
-    --ombre: rgba(0, 0, 0, 0.25);
-}
-
-/* =======================================================
-   GÉNÉRAL
-======================================================= */
 
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
-    color: var(--blanc);
-
+    color: #ffffff;
     background-image: url("images/fondnts3.jpg");
     background-size: cover;
     background-position: center;
@@ -40,468 +11,243 @@ body {
     background-attachment: fixed;
 }
 
-/* =======================================================
-   BANDEAU
-======================================================= */
+/* ---------- Bandeau ---------- */
 
 .header {
     display: flex;
     align-items: center;
-
-    background: var(--bleu-principal);
-
+    background: #004466;
     padding: 15px 35px;
-
     position: relative;
-
-    box-shadow: 0 2px 10px var(--ombre);
+    box-shadow: 0px 2px 10px rgba(0,0,0,.25);
 }
 
 .header-logo {
     height: 70px;
 }
 
-/* -------- Menu -------- */
-
 .nav-links {
     position: absolute;
-
     left: 50%;
-
     transform: translateX(-50%);
-
     display: flex;
-
     gap: 35px;
 }
 
 .nav-links a {
-    color: var(--blanc);
-
+    color: white;
     text-decoration: none;
-
     font-size: 18px;
-
     font-weight: bold;
-
-    transition: 0.25s;
+    transition: .25s;
 }
 
 .nav-links a:hover {
-    color: var(--bleu-clair);
+    color: #9bd4ff;
 }
 
-/* =======================================================
-   BLOC PRINCIPAL
-======================================================= */
+/* ---------- Bloc principal ---------- */
 
 .main-content {
     max-width: 1000px;
-
     margin: 50px auto;
-
-    padding: 45px;
-
-    background: var(--fond-principal);
-
+    padding: 40px;
+    background: rgba(0,0,0,.35);
     backdrop-filter: blur(3px);
-
     border-radius: 12px;
 }
 
-/* =======================================================
-   TYPOGRAPHIE
-======================================================= */
+/* ---------- Hiérarchie typographique ---------- */
 
 .main-content h1 {
-    font-size: 52px;
-
+    font-size: 48px;
     font-weight: 700;
-
     text-align: center;
-
-    margin-top: 0;
-
-    margin-bottom: 15px;
-}
-
-.date-congres {
-    display: block;
-
-    font-size: 36px;
-
-    font-weight: 700;
-
-    text-align: center;
-
-    color: var(--bleu-clair);
-
-    margin-top: 15px;
-
-    margin-bottom: 10px;
-}
-
-.lieu {
-    font-size: 28px;
-
-    font-weight: 600;
-
-    text-align: center;
-
-    margin-top: 0;
-
     margin-bottom: 40px;
 }
 
 .main-content h2 {
     font-size: 34px;
-
-    color: var(--bleu-clair);
-
-    margin-top: 40px;
-
+    margin-top: 45px;
     margin-bottom: 20px;
+    color: #bfe8ff;
+}
+
+.main-content h2bis {
+    font-size: 28px;
+    margin-top: 45px;
+    margin-bottom: 25px;
+    color: white;
 }
 
 .main-content h3 {
     font-size: 28px;
-
     margin-top: 35px;
-
     margin-bottom: 15px;
 }
 
 .main-content p {
     font-size: 20px;
-
     line-height: 1.7;
-
     margin-bottom: 20px;
 }
 
 .main-content li {
     font-size: 20px;
-
     line-height: 1.6;
 }
 
-/* =======================================================
-   FORMULAIRE
-======================================================= */
+/* ---------- Formulaire inscription en 2 colonnes ---------- */
 
 .form-grid {
     max-width: 900px;
-
     margin: 40px auto 0;
-
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
-    gap: 25px 35px;
-
+    gap: 22px 30px;
     text-align: left;
 }
 
-.form-group {
-    display: flex;
-
-    flex-direction: column;
-}
-
 .form-group label {
-    margin-bottom: 8px;
-
-    font-size: 18px;
-
+    display: block;
+    margin-bottom: 6px;
     font-weight: bold;
+    font-size: 18px;
 }
 
 .form-group input,
 .form-group select {
     width: 100%;
-
     padding: 12px;
-
     border: none;
-
     border-radius: 6px;
-
     font-size: 17px;
-
     box-sizing: border-box;
 }
 
-/* Élément prenant toute la largeur du formulaire */
+/* Élément qui prend toute la largeur du formulaire */
 
 .full-width {
     grid-column: 1 / -1;
 }
 
-/* =======================================================
-   CASES À COCHER
-======================================================= */
+/* ---------- Cases à cocher ---------- */
 
 .checkbox-line {
     display: flex;
-
     align-items: flex-start;
-
     gap: 12px;
-
     font-size: 16px;
-
     line-height: 1.5;
-
     font-weight: normal;
 }
 
-.checkbox-line input[type="checkbox"] {
+.checkbox-line input {
     width: auto;
-
-    height: auto;
-
-    margin-top: 3px;
-
-    flex-shrink: 0;
+    margin-top: 4px;
 }
 
-/* =======================================================
-   BOUTONS
-======================================================= */
+/* ---------- Bouton de validation centré ---------- */
 
 .form-submit {
     text-align: center;
+    margin-top: 10px;
 }
+
+.form-submit .btn-inscription {
+    display: inline-block;
+    margin: 20px auto;
+}
+
+/* ---------- Boutons ---------- */
 
 .btn-inscription,
 .btn-logement {
     display: inline-block;
-
-    padding: 14px 28px;
-
     margin-top: 20px;
-
-    border: none;
-
+    padding: 14px 28px;
     border-radius: 6px;
-
-    background: var(--bleu-secondaire);
-
-    color: var(--blanc);
-
+    background: #005f8c;
+    color: white;
     text-decoration: none;
-
-    font-family: inherit;
-
     font-size: 20px;
-
     font-weight: bold;
-
-    cursor: pointer;
-
-    transition:
-        background-color 0.25s,
-        transform 0.25s;
+    transition: .25s;
 }
 
 .btn-inscription:hover,
 .btn-logement:hover {
-    background: var(--bleu-survol);
-
-    transform: translateY(-2px);
+    background: #0096d6;
 }
 
-.form-submit .btn-inscription {
-    margin-right: auto;
-
-    margin-left: auto;
-}
-
-/* =======================================================
-   TEXTE COMPLÉMENTAIRE
-======================================================= */
+/* ---------- Bloc complémentaire ---------- */
 
 .bloc-inscription {
-    max-width: 900px;
-
-    margin: 60px auto 0;
-
+    margin-top: 60px;
     text-align: center;
 }
 
 .rgpd {
-    max-width: 900px;
-
     margin: 40px auto;
-
+    max-width: 900px;
     font-size: 15px;
-
-    line-height: 1.7;
-
     text-align: justify;
+    line-height: 1.7;
 }
 
-/* =======================================================
-   ADRESSE + CARTE
-======================================================= */
+/* ---------- Adresse + carte ---------- */
 
 .info-section {
     display: flex;
-
     align-items: flex-start;
-
+    background: rgba(255,255,255,.90);
+    color: black;
     padding: 35px;
-
-    background: var(--fond-clair);
-
-    color: var(--noir);
 }
 
 .adresse-info {
     width: 40%;
-
     padding-right: 40px;
-
-    box-sizing: border-box;
 }
 
 .adresse-info h2 {
-    color: var(--bleu-principal);
-
-    font-size: 30px;
-
-    margin-top: 0;
+    color: #004466;
 }
 
 .adresse-info p {
-    color: var(--texte-sombre);
-
+    color: #222222;
     font-size: 18px;
-
-    line-height: 1.5;
 }
 
 .map {
     width: 60%;
-
     height: 450px;
 }
 
 .map iframe {
     width: 100%;
-
     height: 100%;
-
     border: none;
 }
 
-/* =======================================================
-   PARTENAIRES
-======================================================= */
-
-.grille-partenaires {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    justify-content: center;
-
-    align-items: center;
-
-    gap: 45px;
-
-    margin: 50px auto;
-}
-
-.logo-partenaire {
-    max-width: 180px;
-
-    max-height: 110px;
-
-    width: auto;
-
-    height: auto;
-
-    object-fit: contain;
-
-    transition: transform 0.25s;
-}
-
-.logo-partenaire:hover {
-    transform: scale(1.05);
-}
-
-/* =======================================================
-   RESPONSIVE
-======================================================= */
+/* ---------- Responsive ---------- */
 
 @media screen and (max-width: 900px) {
     .header {
         flex-direction: column;
-
-        padding: 15px 20px;
-    }
-
-    .header-logo {
-        height: 60px;
     }
 
     .nav-links {
         position: static;
-
         transform: none;
-
         flex-wrap: wrap;
-
         justify-content: center;
-
-        gap: 18px;
-
         margin-top: 20px;
     }
 
-    .nav-links a {
-        font-size: 16px;
-    }
-
-    .main-content {
-        margin: 20px;
-
-        padding: 25px;
-    }
-
-    .main-content h1 {
-        font-size: 38px;
-    }
-
-    .date-congres {
-        font-size: 28px;
-    }
-
-    .lieu {
-        font-size: 22px;
-    }
-
-    .main-content h2 {
-        font-size: 28px;
-    }
-
-    .main-content h3 {
-        font-size: 24px;
-    }
-
-    .main-content p,
-    .main-content li {
-        font-size: 18px;
-    }
-
     .form-grid {
-        max-width: 100%;
-
         grid-template-columns: 1fr;
-
-        gap: 20px;
+        max-width: 95%;
     }
 
     .info-section {
@@ -513,64 +259,33 @@ body {
         width: 100%;
     }
 
-    .adresse-info {
-        padding-right: 0;
-    }
-
     .map {
-        height: 350px;
-
         margin-top: 30px;
-    }
-
-    .grille-partenaires {
-        gap: 30px;
-    }
-
-    .logo-partenaire {
-        max-width: 150px;
-
-        max-height: 90px;
-    }
-}
-
-/* =======================================================
-   PETITS ÉCRANS
-======================================================= */
-
-@media screen and (max-width: 600px) {
-    body {
-        font-size: 16px;
+        height: 350px;
     }
 
     .main-content {
-        margin: 12px;
-
-        padding: 20px;
-    }
-
-    .main-content h1 {
-        font-size: 32px;
-    }
-
-    .date-congres {
-        font-size: 24px;
-    }
-
-    .lieu {
-        font-size: 20px;
-    }
-
-    .btn-inscription,
-    .btn-logement {
-        padding: 12px 20px;
-
-        font-size: 18px;
-    }
-
-    .map {
-        height: 280px;
+        margin: 20px;
+        padding: 25px;
     }
 }
+
+/* ---------- Logo partenaire ---------- */
+
+.grille-partenaires{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    margin:40px auto;
+}
+
+.logo-partenaire{
+    max-width:180px;
+    max-height:100px;
+    object-fit:contain;
+}
+
 ```
 
