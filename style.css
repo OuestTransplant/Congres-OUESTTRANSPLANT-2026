@@ -52,7 +52,7 @@ body {
     max-width: 1000px;
     margin: 50px auto;
     padding: 40px;
-    background: rgba(0,0,0,.35);
+    background: rgba(255,255,255,.90);
     backdrop-filter: blur(3px);
     border-radius: 12px;
 }
