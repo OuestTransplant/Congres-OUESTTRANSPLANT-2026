@@ -64,6 +64,7 @@ body {
     font-weight: 700;
     text-align: center;
     margin-bottom: 40px;
+    color : black;
 }
 
 .main-content h2 {
@@ -77,13 +78,14 @@ body {
     font-size: 28px;
     margin-top: 45px;
     margin-bottom: 25px;
-    color: white;
+    color: black;
 }
 
 .main-content h3 {
     font-size: 28px;
     margin-top: 35px;
     margin-bottom: 15px;
+    color : black;
 }
 
 .main-content p {
