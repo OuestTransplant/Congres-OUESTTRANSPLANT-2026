@@ -60,7 +60,7 @@ body {
 /* ---------- Hiérarchie typographique ---------- */
 
 .main-content h1 {
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 700;
     text-align: center;
     margin-bottom: 40px;
@@ -68,21 +68,21 @@ body {
 }
 
 .main-content h2 {
-    font-size: 34px;
+    font-size: 20px;
     margin-top: 45px;
     margin-bottom: 20px;
     color: #2255b3;
 }
 
 .main-content h2bis {
-    font-size: 28px;
+    font-size: 20px;
     margin-top: 45px;
     margin-bottom: 25px;
     color: black;
 }
 
 .main-content h3 {
-    font-size: 28px;
+    font-size: 20px;
     margin-top: 35px;
     margin-bottom: 15px;
     color : black;
