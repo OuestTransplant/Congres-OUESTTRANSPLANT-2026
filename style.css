@@ -220,9 +220,7 @@ body {
 
 /* Partie adresse */
 .adresse-info {
-    width: 40%;
-    padding: 0;
-    box-sizing: border-box;
+    flex: 0 0 40%;
 }
 
 .adresse-info h2 {
@@ -237,9 +235,8 @@ body {
 
 /* Partie carte */
 .map {
-    width: 60%;
+    flex: 1;
     height: 250px;
-    box-sizing: border-box;
 }
 
 .map iframe {
