@@ -207,28 +207,27 @@ body {
 
 .info-section {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     background: rgba(255,255,255,.90);
     color: black;
-    padding: 15px 20px;
+    padding: 20px 30px;
     margin-top: auto;
-    
-    width: 40%;
     margin-left: auto;
+    width: 50%;
     box-sizing: border-box;
+    gap: 30px;
 }
 
-    /* Repousse le bloc vers le bas */
-    margin-top: auto;
-}
-
+/* Partie adresse */
 .adresse-info {
     width: 40%;
-    padding-right: 40px;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .adresse-info h2 {
     color: #004466;
+    margin-top: 0;
 }
 
 .adresse-info p {
@@ -236,15 +235,19 @@ body {
     font-size: 18px;
 }
 
+/* Partie carte */
 .map {
-    width: 150%;
+    width: 60%;
     height: 250px;
+    box-sizing: border-box;
 }
 
 .map iframe {
+    display: block;
     width: 100%;
     height: 100%;
     border: none;
+    border-radius: 8px;
 }
 
 /* ---------- Responsive ---------- */
