@@ -208,9 +208,15 @@ body {
 .info-section {
     display: flex;
     align-items: flex-start;
-    background: rgba(255,255,255,.80);
+    background: rgba(255,255,255,.90);
     color: black;
     padding: 15px 20px;
+    margin-top: auto;
+    
+    width: 50%;
+    margin-left: auto;
+    box-sizing: border-box;
+}
 
     /* Repousse le bloc vers le bas */
     margin-top: auto;
