@@ -208,7 +208,7 @@ body {
 .info-section {
     display: flex;
     align-items: flex-start;
-    background: rgba(255,255,255,.90);
+    background: rgba(255,255,255,.80);
     color: black;
     padding: 15px 20px;
 
